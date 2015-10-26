@@ -19,7 +19,9 @@ Route::get('/', function () {
 Route::get('/resource', function () {
 
     $authenticated = false;
-    Session::set('authenticated' ,true);
+    \Debugbar::info("Xivato");
+    \Debugbar::info(Session::all());
+    //Session::set('authenticated' ,true);
     if (Session::has('authenticated')){
         if (Session::has('authenticated') == true ){
             $authenticated = true;
