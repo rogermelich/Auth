@@ -20,8 +20,8 @@ Route::get('/home', ['as' => 'auth.home'],function () {
     return view('home');
 });
 
-Route::get('/login', 'LoginController@getLogin');
-Route::post('postLogin', ['as' => 'auth.postLogin', 'uses' => 'LoginController@postLogin']);
+Route::get('/login', ['as' => 'auth.login', 'uses' => 'LoginController@postlogin']);
+Route::post('postLogin', ['as' => 'auth.postlogin', 'uses' => 'LoginController@postlogin']);
 
 
 Route::get('/resource', function () {
