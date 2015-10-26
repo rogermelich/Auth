@@ -16,12 +16,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
+
 Route::get('/resource', function () {
 
     $authenticated = false;
-    \Debugbar::info("Xivato");
-    \Debugbar::info(Session::all());
-    //Session::set('authenticated' ,true);
     if (Session::has('authenticated')){
         if (Session::has('authenticated') == true ){
             $authenticated = true;
