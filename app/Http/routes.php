@@ -19,7 +19,7 @@ Route::get('/', function () {
 Route::get('/resource', function () {
 
     $authenticated = false;
-    dd(Session::all());
+    Session::set('authenticated' ,true);
     if (Session::has('authenticated')){
         if (Session::has('authenticated') == true ){
             $authenticated = true;
