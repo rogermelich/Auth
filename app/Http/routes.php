@@ -23,6 +23,7 @@ Route::get('/home', ['as' => 'auth.home'],function () {
 Route::get('/login', ['as' => 'auth.login', 'uses' => 'LoginController@postlogin']);
 Route::post('postLogin', ['as' => 'auth.postlogin', 'uses' => 'LoginController@postlogin']);
 
+Session::set('authenticated');
 
 Route::get('/resource', function () {
 
