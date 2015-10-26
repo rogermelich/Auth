@@ -11,13 +11,22 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/resource', function () {
-    $authentication = false;
-    if ($authentication){
+
+    $authenticated = false;
+    dd(Session::all());
+    if (Session::has('authenticated')){
+        if (Session::has('authenticated') == true ){
+            $authenticated = true;
+        }
+    }
+
+    if ($authenticated){
     return view('resource');
     }else {
         return view('login');
