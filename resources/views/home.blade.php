@@ -38,8 +38,16 @@
 <body>
 <div class="container">
     <div class="content">
+<<<<<<< HEAD
         <div class="title">Laravel 5</div>
     </div>
 </div>
 </body>
 </html>
+=======
+        <div class="title">This is Home</div>
+    </div>
+</div>
+</body>
+</html>
+>>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e

@@ -11,10 +11,15 @@
 |
 */
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
 Route::get('/', function () {
     return view('welcome');
 });
 
+<<<<<<< HEAD
 Route::get('/home', ['as' => 'auth.home' , function () {
     return view('home');
 }]);
@@ -38,3 +43,29 @@ Route::get('/resource', function () {
         return view('login');
     }
 });
+=======
+Route::get('/home', ['as' => 'auth.home'],function () {
+    return view('home');
+});
+
+Route::get('/login', ['as' => 'auth.login', 'uses' => 'LoginController@postlogin']);
+Route::post('postLogin', ['as' => 'auth.postlogin', 'uses' => 'LoginController@postlogin']);
+
+Session::set('authenticated');
+
+Route::get('/resource', function () {
+
+    $authenticated = false;
+    if (Session::has('authenticated')){
+        if (Session::get('authenticated') == true ){
+            $authenticated = true;
+        }
+    }
+
+    if ($authenticated){
+    return view('resource');
+    }else {
+        return view('login');
+    }
+});
+>>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e

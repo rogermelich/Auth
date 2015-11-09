@@ -3,7 +3,14 @@
 Homestead.yaml
 Homestead.json
 .env
+<<<<<<< HEAD
 composer.lock
 _ide_helper.php
 .idea/
 
+=======
+.idea
+_ide_helper.php
+composer.lock
+.env
+>>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
