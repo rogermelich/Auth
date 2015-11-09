@@ -4,8 +4,6 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests;
-
-
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -36,6 +34,12 @@ class LoginController extends Controller
     private function login($email, $password)
     {
         $user = User::findOrFail(id);//Per a que peti
+
+        if (Hash::check($password, $user->$password)){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
@@ -46,5 +50,9 @@ class LoginController extends Controller
      */
     public function getLogin(){
         return view('login');
+    }
+
+    public function potLogin(){
+        return view('home');
     }
 }
