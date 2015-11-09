@@ -144,13 +144,6 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-<<<<<<< HEAD
-        // Added for debugging.
-        Barryvdh\Debugbar\ServiceProvider::class,
-        // Added for Doc for Laravel
-=======
-        Barryvdh\Debugbar\ServiceProvider::class,
->>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
 
     ],
@@ -201,13 +194,6 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-<<<<<<< HEAD
-        // Added for debugging porpuse.
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
-=======
-        'Debugbar' => Barryvdh\Debugbar\Facade::class,
-
->>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
     ],
 
 ];
