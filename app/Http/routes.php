@@ -11,15 +11,11 @@
 |
 */
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
 Route::get('/', function () {
     return view('welcome');
 });
 
-<<<<<<< HEAD
 Route::get('/home', ['as' => 'auth.home' , function () {
     return view('home');
 }]);
@@ -43,7 +39,7 @@ Route::get('/resource', function () {
         return view('login');
     }
 });
-=======
+
 Route::get('/home', ['as' => 'auth.home'],function () {
     return view('home');
 });
@@ -68,4 +64,3 @@ Route::get('/resource', function () {
         return view('login');
     }
 });
->>>>>>> 45934c70ccf0fc2868000427acc4c62f5f307a4e
