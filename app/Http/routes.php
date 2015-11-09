@@ -40,27 +40,10 @@ Route::get('/resource', function () {
     }
 });
 
-Route::get('/home', ['as' => 'auth.home'],function () {
-    return view('home');
+Route::get('/flushSession', function() {
+    Session:flush();
 });
 
-Route::get('/login', ['as' => 'auth.login', 'uses' => 'LoginController@postlogin']);
-Route::post('postLogin', ['as' => 'auth.postlogin', 'uses' => 'LoginController@postlogin']);
-
-Session::set('authenticated');
-
-Route::get('/resource', function () {
-
-    $authenticated = false;
-    if (Session::has('authenticated')){
-        if (Session::get('authenticated') == true ){
-            $authenticated = true;
-        }
-    }
-
-    if ($authenticated){
-    return view('resource');
-    }else {
-        return view('login');
-    }
-});
+Route::get('/register',['as' => "auth.register", function() {
+    echo "A qui es el registre";
+}]);
