@@ -20,9 +20,9 @@ Route::get('/home', ['as' => 'auth.home' , function () {
     return view('home');
 }]);
 
-Route::get('/login', [ 'as' => 'auth.login', 'uses' => 'LoginController@getLogin' ]);
+Route::get('/login', ['as' => 'auth.login', 'uses' =>  'LoginController@getLogin']);
 
-Route::post('/postlogin', [ 'as' => 'auth.postLogin', 'uses' => 'LoginController@postLogin' ]);
+Route::post('/postLogin', ['as' => 'auth.postLogin', 'uses' => 'LoginController@postLogin']);
 
 Route::get('/resource', function () {
     $authenticated = false;
@@ -40,10 +40,10 @@ Route::get('/resource', function () {
     }
 });
 
-Route::get('/flushSession', function() {
-    Session:flush();
-});
+Route::get('/register',
+    ['as' => 'auth.register', 'uses' =>  'RegisterController@getRegister']
+);
 
-Route::get('/register',['as' => "auth.register", function() {
-    echo "A qui es el registre";
-}]);
+Route::post('/register',
+    ['as' => 'register.postRegister', 'uses' =>  'RegisterController@postRegister']
+);
