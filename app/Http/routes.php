@@ -40,6 +40,14 @@ Route::get('/resource', function () {
     }
 });
 
+Route::get('/flushSession',
+    ['as' => 'session.flush',
+        function() {
+            Session::flush();
+        }]
+);
+
+
 Route::get('/register',
     ['as' => 'auth.register', 'uses' =>  'RegisterController@getRegister']
 );
