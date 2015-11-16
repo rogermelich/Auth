@@ -20,39 +20,36 @@ class LoginController extends Controller
      * @param Request $request
      * @return mixed
      */
-    public function postLogin(Request $request) {
-
-        //\Debugbar::info("0k entra a postLogin");
-        echo "asdasd";
-        if ($this->login($request->email.$request->password)){
-            return redirec()->route('home');
+    public function postLogin(Request $request){
+        //echo "asdasd";
+        if ($this->login($request->email, $request->password)) {
+            return redirect()->route('auth.home');
         } else {
-            return redirec()->route('login');
+            return redirect()->route('auth.login');
         }
-    }
 
-    private function login($email, $password)
-    {
+
         $user = User::findOrFail(id);//Per a que peti
 
-        if (Hash::check($password, $user->$password)){
+        if (Hash::check($password, $user->$password)) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
+        private function login($email, $password){
 
-    /**
-     *
-     * get Login
-     *
-     * @return \Illuminate\View\View
-     */
-    public function getLogin(){
-        return view('login');
-    }
+            $user = User::where('email', $email)->first();
 
-    public function potLogin(){
-        return view('home');
+            if (Hash::check($password, $user->password)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        public function getLogin() {
+            return view('login');
+        }
+
     }
-}
