@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 
 use App\Http\Requests;
+use App\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Hash;
 
 /**
  * Class LoginController
@@ -29,7 +31,7 @@ class LoginController extends Controller
         }
 
 
-        $user = User::findOrFail(id);//Per a que peti
+        //$user = User::findOrFail(id);//Per a que peti
 
         if (Hash::check($password, $user->$password)) {
             return true;
