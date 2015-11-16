@@ -36,6 +36,16 @@
     <div class="content">
         <div class="title">REGISTER</div>
 
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form method="post" action="{{ route('register.postRegister') }}">
             {!! csrf_field() !!}
             <div class="form-group">
@@ -60,7 +70,7 @@
         </form>
 
         Ja tens usuari?
-        <a id="register" href="{{ route('auth.register') }}">Loga't</a>
+        <a id="register" href="{{ route('auth.login') }}">Loga't</a>
     </div>
 </div>
 </body>
