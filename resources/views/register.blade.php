@@ -50,19 +50,19 @@
             {!! csrf_field() !!}
             <div class="form-group">
                 <label for="name">User name:</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <input type="text" class="form-control" id="name" name="name" required>
             </div>
             <div class="form-group">
                 <label for="email">Email adress:</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
-                <input type="password" class="form-control" id="password" name="password">
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
                 <label for="password_confirm">Password confirm:</label>
-                <input type="password" class="form-control" id="password_confirm" name="password_confirm">
+                <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
             </div>
             <button id="register" type="submit" class="btn btn-default">Register</button>
             <button type="reset" class="btn btn-default">Reset</button>
