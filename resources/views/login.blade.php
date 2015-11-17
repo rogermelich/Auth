@@ -39,6 +39,15 @@
 <div class="container">
     <div class="content">
         <div class="title">Login</div>
+        @if (count($errors) > 0)
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
         <form method="post" action="{{ route('auth.postLogin')}}">
             {!! csrf_field() !!}
             <div class="form-group">
