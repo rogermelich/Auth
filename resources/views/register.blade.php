@@ -71,8 +71,8 @@
                 <input type="password" class="form-control" id="password" name="password" required>
             </div>
             <div class="form-group">
-                <label for="password_confirm">Password confirm:</label>
-                <input type="password" class="form-control" id="password_confirm" name="password_confirm" required>
+                <label for="password_confirmation">Password confirm:</label>
+                <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
             </div>
             <button id="register" type="submit" class="btn btn-default">Register</button>
             <button type="reset" class="btn btn-default">Reset</button>
