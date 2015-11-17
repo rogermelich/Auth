@@ -36,9 +36,8 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="container"><div class="jumbotron">REGISTER</div>
     <div class="content">
-        <div class="title">REGISTER</div>
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
@@ -74,7 +73,7 @@
                 <label for="password_confirmation">Password confirm:</label>
                 <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" required>
             </div>
-            <button id="register" type="submit" class="btn btn-default">Register</button>
+            <button id="register" type="submit" class="btn btn-primary">Register</button>
             <button type="reset" class="btn btn-default">Reset</button>
 
         </form>
