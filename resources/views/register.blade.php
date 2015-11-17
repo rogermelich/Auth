@@ -58,12 +58,13 @@
                        value="{{ old('name') }}"
                        required>
             </div>
-            <div class="form-group">
+            <div class="form-group" id="emailFormGroup">
                 <label for="email">Email adress:</label>
                 <input type="email" class="form-control" id="email" name="email"
                        placeholder="example@example.com"
                        value="{{ old('email') }}"
                        required>
+                <div v-show="exists">Email ja existeix</div>
             </div>
             <div class="form-group">
                 <label for="password">Password:</label>
